@@ -8,3 +8,5 @@ yarn build
 yarn start
 yarn logs
 ```
+
+==> You can go to Data Taps home page and see the metrics flowing in at: https://www.taps.boilingdata.com/

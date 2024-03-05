@@ -1,0 +1,16 @@
+{
+  "name": "data-taps-postgres-cdc",
+  "version": "0.1.0",
+  "main": "index.js",
+  "author": "Dan Forsberg <dan@boilingdata.com>",
+  "type": "module",
+  "scripts": {
+    "build": "docker build -t bd-pg-cdc .",
+    "start": "docker-compose up -d",
+    "logs": "docker-compose logs -f"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "pg-logical-replication": "^2.0.3"
+  }
+}

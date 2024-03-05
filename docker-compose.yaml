@@ -1,0 +1,21 @@
+version: "3"
+services:
+  bd-pg-cdc:
+    image: bd-pg-cdc:latest
+    container_name: bd-pg-cdc
+    working_dir: /var/task
+    tty: true
+    stdin_open: true
+    environment:
+      BD_TAP_URL: "https://ythjkjtk6behgxomi3sajud5qq0rlxky.lambda-url.eu-west-1.on.aws/"
+      BD_USERNAME: ${BD_USERNAME} # With a public Tap, no creds needed.
+      BD_PASSWORD: ${BD_PASSWORD}
+      PG_USERNAME: demo
+      PG_PASSWORD: demouser
+      PG_DBNAME: demodb
+      PG_SLOTNAME: slot_wal2json
+      DEBUG: "true"
+    volumes:
+      - ${PWD}/:/var/task:rw
+    entrypoint: ["bash", "-c"]
+    command: ["/var/task/startup.sh"] # NOTE! Uses local script and src/index.js through the volume

@@ -1,6 +1,6 @@
 [FluentBit](https://github.com/boilingdata/data-taps-fluentbit-example) | [Web Analytics](https://github.com/boilingdata/data-taps-webanalytics-example) | [PostgreSQL CDC](https://github.com/boilingdata/data-taps-postgres-cdc) | [REST API](https://github.com/boilingdata/data-taps-nycopendata-example) | [OpenSearch/ES](https://github.com/boilingdata/data-taps-opensearch-to-s3)
 
-# PostgreSQL CDC to Data Taps
+# PostgreSQL CDC --> Data Tap --> S3 Parquet
 
 <p align="center">
   <img src="img/postgres-cdc.png" title="simple architecture">
